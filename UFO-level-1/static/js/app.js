@@ -1,20 +1,18 @@
-function UfoSigthing () {
+function showData(data) {
     
-    let table = d3.select("body")
-    .append("table")
-    .classed("table table-striped", true)
+    let table = d3.select("#data-table")
 
     table.selectAll("tr").remove()
     
     let headerRow = table.append("tr")
 
-    headerRow.append("th").text("datetime")
-    headerRow.append("th").text("city")
-    headerRow.append("th").text("state")
-    headerRow.append("th").text("country")
-    headerRow.append("th").text("shape")
-    headerRow.append("th").text("durationMinutes")
-    headerRow.append("th").text("comments")
+    headerRow.append("th").text("Date")
+    headerRow.append("th").text("City")
+    headerRow.append("th").text("State")
+    headerRow.append("th").text("Country")
+    headerRow.append("th").text("Shape")
+    headerRow.append("th").text("Duration")
+    headerRow.append("th").text("Comments")
 
     let tableBody = table.append("tbody")
 
@@ -30,11 +28,38 @@ function UfoSigthing () {
 
     })
     
+}
 
+function handleClick() {
+    let datetime = d3.select("#date-filter-input").property("value")
+    let filteredData = data.filter((d) => d.datetime === datetime)
+    showData(filteredData)
 
 }
 
-d3.select("#filter-btn").on("click", UfoSigthing)
+d3.select("#table-button").on("click", handleClick)
+// function handleClick() {
+//     let city = d3.select("#city-filter-input").property("value")
+//     let filteredData = data.filter((d) => d.city === city)
+//     showData(filteredData)
+
+// }
+// d3.select("#city-button").on("click", handleClick)
+// function handleClick() {
+//     let state = d3.select("#state-filter-input").property("value")
+//     let filteredData = data.filter((d) => d.state === state)
+//     showData(filteredData)
+// }
+// d3.select("#state-button").on("click", handleClick) 
+
+
+
+ 
+
+
+
+// d3.select("#table-button").on("click", handleClick)
+// d3.select("#filter-btn").on("click", showData)
 
 
 
