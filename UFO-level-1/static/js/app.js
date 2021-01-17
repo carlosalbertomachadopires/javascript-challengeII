@@ -38,28 +38,7 @@ function handleClick() {
 }
 
 d3.select("#table-button").on("click", handleClick)
-// function handleClick() {
-//     let city = d3.select("#city-filter-input").property("value")
-//     let filteredData = data.filter((d) => d.city === city)
-//     showData(filteredData)
 
-// }
-// d3.select("#city-button").on("click", handleClick)
-// function handleClick() {
-//     let state = d3.select("#state-filter-input").property("value")
-//     let filteredData = data.filter((d) => d.state === state)
-//     showData(filteredData)
-// }
-// d3.select("#state-button").on("click", handleClick) 
-
-
-
- 
-
-
-
-// d3.select("#table-button").on("click", handleClick)
-// d3.select("#filter-btn").on("click", showData)
 
 
 
