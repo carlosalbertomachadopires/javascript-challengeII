@@ -3,33 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta htpp-equity="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="static/css/style.css">
-  <script src="https://d3js.org/d3.v6.min.js"></script>
-  
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.0.0/math.min.js"></script>
+  <style>
+
+    .output {
+      text-align: center;
+      font-weight: bold;
+    }
+    
+    
+  </style>
+      
 </head>
 <body>
-
-  <div>
-
-    <label>Enter a Date</label>
-    <input class="form-control" id="datetime" type="text" placeholder="1/11/2011">
+  <h1 class="output">UFO SIGHTINGS</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">
+        <label>Date: </label>
+        <input id="date-filter-input" type="text" id="datetime" name="text-input" placeholder="1/1/2010">
+        <button id="table-button">Submit_date</button>
+      </div>
+      <div class="col-md-10">
+        <table id="data-table" class="table table-striped"></table>
+      </div>      
+    </div>
     
-
-    <table id="data-table" class="table-striped"></table>
-
-
   </div>
-  
-  <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">  
+        <label>CIty: </label>
+        <input id="city-filter-input" type="text" id="city" name="text-input" placeholder="benton">
+        <button id="city-button">Submit_city</button>
+      </div>
+      <div class="col-md-10">
+        <table id="data-table" class="table table-striped"></table>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">   
+        <label>State: </label>
+        <input id="state-filter-input" type="text" id="state" name="text-input" placeholder="ar">
+        <button id="state-button">Submit_state</button>
+      </div>
+      <div class="col-md-10">
+        <table id="data-table" class="table table-striped"></table>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">  
+        <label>Country: </label>
+        <input id="country-filter-input" type="text" id="country" name="text-input" placeholder="us">
+        <button id="country-button">Submit_country</button>
+      </div>
+      <div class="col-md-10">
+        <table id="data-table" class="table table-striped"></table>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">
+        <label>Shape: </label>
+        <input id="shape-filter-input" type="text" id="shape" name="text-input" placeholder="circle">
+        <button id="shape-button">Submit_shape</button>
+      </div>
+      <div class="col-md-10">
+        <table id="data-table" class="table table-striped"></table>
+      </div>    
+    </div>
+  </div>
 
-  
 
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
 <script src="data.js"></script>
 <script src="app.js"></script>
-
+<script src="appII.js"></script>
+<script src="appIII.js"></script>
+<script src="appIV.js"></script>
+<script src="appV.js"></script>
 </html>
